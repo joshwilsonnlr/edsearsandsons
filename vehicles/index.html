@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vehicles We Service | Auto Repair Ballston Spa NY | Ed Sears & Son</title>
-<meta name="description" content="Recently serviced Ford, Honda, Toyota, Nissan, Kia, Jeep, Chevrolet, Buick and more at Ed Sears & Son Auto Repair in Ballston Spa, NY.">
-<meta name="keywords" content="vehicles serviced Ballston Spa, Jeep Wrangler repair, Ford F-150 service, Honda Accord mechanic, Toyota RAV4 Ballston Spa, Kia Niro EV repair Saratoga">
+<meta name="description" content="Recently serviced Ford, Honda, Toyota, Nissan, Kia, Jeep, Chevrolet, Buick at Ed Sears & Son Auto Repair in Ballston Spa, NY.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0a0c;--bg2:#121216;--card:#1a1a20;--accent:#e8a838;--accent2:#c48a2a;--text:#f2f2f6;--muted:#9a9aaa;--border:rgba(255,255,255,.08);--radius:14px;--font:'Inter',system-ui,sans-serif;--display:'Oswald',system-ui,sans-serif;--header:70px}
@@ -26,6 +25,9 @@
 .vehicle-card:hover{border-color:rgba(232,168,56,.35);transform:translateY(-4px)}
 .vehicle-card .photo{height:155px;background:#0e0e12;display:flex;align-items:center;justify-content:center;padding:10px}
 .vehicle-card .photo img{max-height:135px;object-fit:contain}
+/* Remove white background on RAV4 / white-bg stock photos */
+.vehicle-card .photo img.white-bg{mix-blend-mode:lighten}
+.brand-preview img.white-bg{mix-blend-mode:lighten}
 .vehicle-card .body{padding:12px 14px 16px}
 .vehicle-card .year{color:var(--accent);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
 .vehicle-card h3{font-family:var(--display);font-size:1.05rem;margin:3px 0 5px}
@@ -34,9 +36,11 @@
 .vehicle-card .rating{color:var(--accent);font-size:.78rem;margin-top:5px}
 .brands{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .brand-pill{padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:50px;font-size:.85rem;cursor:pointer;font-family:inherit;color:var(--text)}
-.brand-pill:hover,.brand-pill.active{border-color:var(--accent);color:var(--accent)}
+.brand-pill:hover,.brand-pill.active{border-color:var(--accent);color:var(--accent);background:rgba(232,168,56,.1)}
 .brand-preview{display:none;grid-template-columns:1fr 1.3fr;gap:24px;align-items:center;background:var(--card);border:1px solid rgba(232,168,56,.3);border-radius:var(--radius);padding:24px;margin-bottom:28px}
 .brand-preview.show{display:grid}
+.brand-preview .vis{background:#0e0e12;border-radius:10px;padding:16px;text-align:center;min-height:160px;display:flex;align-items:center;justify-content:center}
+.brand-preview img{max-height:150px;transition:opacity .2s}
 .brand-preview h3{font-family:var(--display);font-size:1.4rem;color:var(--accent)}
 .brand-preview p{color:var(--muted);margin:8px 0 12px}
 .btn{display:inline-flex;padding:12px 22px;font-weight:600;border-radius:50px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0a0a0c}
@@ -47,8 +51,7 @@
 .seo-block{margin-top:36px;padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius)}
 .seo-block h2{font-family:var(--display);font-size:1.25rem;margin-bottom:10px}.seo-block p{color:var(--muted);font-size:.92rem}
 .section-header{text-align:center;margin-bottom:28px}
-.section-header h2{font-family:var(--display);font-size:1.6rem;margin-bottom:8px}
-.section-header p{color:var(--muted)}
+.section-header h2{font-family:var(--display);font-size:1.6rem;margin-bottom:8px}.section-header p{color:var(--muted)}
 .site-footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);margin-top:32px;font-size:.85rem}
 @media(max-width:900px){.nav-toggle{display:block}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#0a0a0c;flex-direction:column;padding:14px}.nav-links.open{display:flex}.brand-preview.show{grid-template-columns:1fr}}
 </style>
@@ -66,39 +69,42 @@
 
 <div class="page-hero"><div class="container">
 <h1>Vehicles We Service</h1>
-<p>Real work at our Ballston Spa shop — photos match models from the original Ed Sears & Son website.</p>
+<p>Click a brand name to see that make — real work at our Ballston Spa shop.</p>
 </div></div>
 
 <section class="section"><div class="container">
 <div id="brand-preview" class="brand-preview">
-<div style="text-align:center"><img id="bp-img" src="../pc/72829.png" alt="Vehicle" style="max-height:140px" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/72829'"></div>
-<div><h3 id="bp-name">Select a brand</h3><p id="bp-msg">Click any make. We service most models in Ballston Spa and Saratoga County.</p>
-<a href="https://edsearsandsons.com/appointments/" class="btn" target="_blank" rel="noopener">Schedule Service</a></div>
+<div class="vis"><img id="bp-img" src="../pc/72829.png" alt="Vehicle" class=""></div>
+<div>
+<h3 id="bp-name">Select a brand</h3>
+<p id="bp-msg">Click any make below. The car photo will update to match.</p>
+<a href="https://edsearsandsons.com/appointments/" class="btn" target="_blank" rel="noopener">Schedule Service</a>
+</div>
 </div>
 
 <p style="text-align:center;color:var(--accent);font-size:.72rem;letter-spacing:.14em;margin-bottom:10px">FOREIGN</p>
 <div class="brands" style="margin-bottom:18px">
-<button type="button" class="brand-pill">Honda</button>
-<button type="button" class="brand-pill">Toyota</button>
-<button type="button" class="brand-pill">Nissan</button>
-<button type="button" class="brand-pill">Kia</button>
-<button type="button" class="brand-pill">Subaru</button>
-<button type="button" class="brand-pill">Hyundai</button>
-<button type="button" class="brand-pill">BMW</button>
-<button type="button" class="brand-pill">Audi</button>
-<button type="button" class="brand-pill">Volkswagen</button>
-<button type="button" class="brand-pill">Mazda</button>
+<button type="button" class="brand-pill" data-brand="Honda">Honda</button>
+<button type="button" class="brand-pill" data-brand="Toyota">Toyota</button>
+<button type="button" class="brand-pill" data-brand="Nissan">Nissan</button>
+<button type="button" class="brand-pill" data-brand="Kia">Kia</button>
+<button type="button" class="brand-pill" data-brand="Subaru">Subaru</button>
+<button type="button" class="brand-pill" data-brand="Hyundai">Hyundai</button>
+<button type="button" class="brand-pill" data-brand="BMW">BMW</button>
+<button type="button" class="brand-pill" data-brand="Audi">Audi</button>
+<button type="button" class="brand-pill" data-brand="Volkswagen">Volkswagen</button>
+<button type="button" class="brand-pill" data-brand="Mazda">Mazda</button>
 </div>
 <p style="text-align:center;color:var(--accent);font-size:.72rem;letter-spacing:.14em;margin-bottom:10px">DOMESTIC</p>
 <div class="brands" style="margin-bottom:32px">
-<button type="button" class="brand-pill">Ford</button>
-<button type="button" class="brand-pill">Chevrolet</button>
-<button type="button" class="brand-pill">Jeep</button>
-<button type="button" class="brand-pill">GMC</button>
-<button type="button" class="brand-pill">Ram</button>
-<button type="button" class="brand-pill">Buick</button>
-<button type="button" class="brand-pill">Dodge</button>
-<button type="button" class="brand-pill">Cadillac</button>
+<button type="button" class="brand-pill" data-brand="Ford">Ford</button>
+<button type="button" class="brand-pill" data-brand="Chevrolet">Chevrolet</button>
+<button type="button" class="brand-pill" data-brand="Jeep">Jeep</button>
+<button type="button" class="brand-pill" data-brand="GMC">GMC</button>
+<button type="button" class="brand-pill" data-brand="Ram">Ram</button>
+<button type="button" class="brand-pill" data-brand="Buick">Buick</button>
+<button type="button" class="brand-pill" data-brand="Dodge">Dodge</button>
+<button type="button" class="brand-pill" data-brand="Cadillac">Cadillac</button>
 </div>
 
 <div class="section-header"><h2>Recently Serviced Vehicles</h2>
@@ -106,68 +112,99 @@
 
 <div class="vehicle-grid">
 <article class="vehicle-card"><div class="photo"><img src="../pc/69395.png" alt="2010 Ford Pickup" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/69395'"></div><div class="body"><div class="year">2010</div><h3>Ford Pickup</h3><div class="meta">174,404 mi · 10/8/2026</div><div class="svc">Exhaust manifold R&R · Bolt extraction</div><div class="rating">John O. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/104998.png" alt="2022 Kia Niro EV" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/104998'"></div><div class="body"><div class="year">2022</div><h3>Kia Niro EV</h3><div class="meta">93,973 mi · 9/29/2026</div><div class="svc">Front bumper · Paint match · Tire rotation</div><div class="rating">Mark M. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/72829.png" alt="2018 Honda Accord" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/72829'"></div><div class="body"><div class="year">2018</div><h3>Honda Accord</h3><div class="meta">101,759 mi · 8/26/2026</div><div class="svc">Fuel injectors · Spark plugs · Rear rotors</div><div class="rating">David W. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/68357.png" alt="2017 Nissan Rogue" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/68357'"></div><div class="body"><div class="year">2017</div><h3>Nissan Rogue</h3><div class="meta">121,029 mi · 8/18/2026</div><div class="svc">Rear disc rotors & pads</div><div class="rating">Fran L. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/70192.png" alt="2016 Chevrolet Trax" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/70192'"></div><div class="body"><div class="year">2016</div><h3>Chevrolet Trax</h3><div class="meta">97,027 mi · 8/8/2026</div><div class="svc">Oil & filter · Brake noise diagnosis</div><div class="rating">Jonny P. – 5 stars</div></div></article>
-
-<article class="vehicle-card"><div class="photo"><img src="../pc/65862.png" alt="2007 Toyota RAV4" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/65862'"></div><div class="body"><div class="year">2007</div><h3>Toyota RAV4</h3><div class="meta">160,417 mi · 7/27/2026</div><div class="svc">Spark plugs · Scanner diagnostics</div><div class="rating">Katrina V. – 5 stars</div></div></article>
-
+<article class="vehicle-card"><div class="photo"><img class="white-bg" src="../pc/65862.png" alt="2007 Toyota RAV4" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/65862'"></div><div class="body"><div class="year">2007</div><h3>Toyota RAV4</h3><div class="meta">160,417 mi · 7/27/2026</div><div class="svc">Spark plugs · Scanner diagnostics</div><div class="rating">Katrina V. – 5 stars</div></div></article>
 <article class="vehicle-card"><div class="photo"><img src="../pc/68267.png" alt="2017 Ford F-150" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/68267'"></div><div class="body"><div class="year">2017</div><h3>Ford F-150</h3><div class="meta">146,892 mi · 7/27/2026</div><div class="svc">Oil · Tire rotation · Check engine light</div><div class="rating">Nadine E. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/72054.png" alt="2018 Kia Niro" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/72054'"></div><div class="body"><div class="year">2018</div><h3>Kia Niro</h3><div class="meta">153,534 mi · 7/17/2026</div><div class="svc">Alignment · Struts · Rear rotors</div><div class="rating">Kenneth S. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/112636.png" alt="2022 Toyota Sienna" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/112636'"></div><div class="body"><div class="year">2022</div><h3>Toyota Sienna</h3><div class="meta">60,034 mi · 7/7/2026</div><div class="svc">Oil and filter service</div><div class="rating">Mariana J. – 5 stars</div></div></article>
-
-<article class="vehicle-card"><div class="photo"><img src="../pc/65862.png" alt="2007 Toyota RAV4 second visit" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/65862'"></div><div class="body"><div class="year">2007</div><h3>Toyota RAV4</h3><div class="meta">158,417 mi · 6/24/2026</div><div class="svc">Ignition coil · Front rotors · Valve cover gasket</div><div class="rating">Katrina V. – 5 stars</div></div></article>
-
+<article class="vehicle-card"><div class="photo"><img class="white-bg" src="../pc/65862.png" alt="2007 Toyota RAV4" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/65862'"></div><div class="body"><div class="year">2007</div><h3>Toyota RAV4</h3><div class="meta">158,417 mi · 6/24/2026</div><div class="svc">Ignition coil · Front rotors · Valve cover gasket</div><div class="rating">Katrina V. – 5 stars</div></div></article>
 <article class="vehicle-card"><div class="photo"><img src="../pc/71909.png" alt="2018 Ford Explorer" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/71909'"></div><div class="body"><div class="year">2018</div><h3>Ford Explorer</h3><div class="meta">77,855 mi · 6/24/2026</div><div class="svc">Rear calipers · NYS inspection</div><div class="rating">Jeremy M. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="../pc/95513.png" alt="2020 Buick Encore GX" onerror="this.src='https://www.mitchell1crm.com/CrmUtilities2/Image/95513'"></div><div class="body"><div class="year">2020</div><h3>Buick Encore GX</h3><div class="meta">144,597 mi · 6/24/2026</div><div class="svc">Oil and filter service</div><div class="rating">Patty G. – 5 stars</div></div></article>
-
 <article class="vehicle-card"><div class="photo"><img src="https://www.mitchell1crm.com/CrmUtilities2/Image/67847" alt="2015 Jeep Wrangler"></div><div class="body"><div class="year">2015</div><h3>Jeep Wrangler</h3><div class="meta">115,120 mi · 2/27/2026</div><div class="svc">Oil and filter service</div><div class="rating">Dana P. – 5 stars</div></div></article>
-
-<article class="vehicle-card"><div class="photo"><img src="https://www.mitchell1crm.com/CrmUtilities2/Image/103054" alt="2020 Nissan Rogue"></div><div class="body"><div class="year">2020</div><h3>Nissan Rogue</h3><div class="meta">Service documented on original site</div><div class="svc">Maintenance & repair at Ballston Spa shop</div><div class="rating">Verified customer</div></div></article>
+<article class="vehicle-card"><div class="photo"><img src="https://www.mitchell1crm.com/CrmUtilities2/Image/103054" alt="2020 Nissan Rogue"></div><div class="body"><div class="year">2020</div><h3>Nissan Rogue</h3><div class="meta">From original site records</div><div class="svc">Maintenance & repair at Ballston Spa shop</div><div class="rating">Verified customer</div></div></article>
 </div>
 
 <div class="seo-block">
 <h2>Cars & Trucks We Repair in Ballston Spa & Saratoga County</h2>
-<p>From <strong>Jeep Wranglers</strong> and <strong>Ford F-150s</strong> to <strong>Honda Accords</strong>, <strong>Toyota RAV4s</strong>, and <strong>Kia Niro EVs</strong>, Ed Sears & Son handles domestic and foreign vehicles. We also work on GMC, Ram, Chevrolet, Buick, Subaru, Hyundai, and more for drivers in Saratoga Springs, Malta, Milton, and Clifton Park.</p>
+<p>From Jeep Wranglers and Ford F-150s to Honda Accords, Toyota RAV4s, and Kia Niro EVs — domestic and foreign vehicles welcome.</p>
 </div>
 </div></section>
 
 <section class="section section-alt"><div class="container">
-<div class="section-header">
-<h2>Our Ballston Spa Shop</h2>
-<p>Photos from the original Ed Sears & Son Auto Repair website.</p>
-</div>
+<div class="section-header"><h2>Our Ballston Spa Shop</h2><p>Photos from the original Ed Sears & Son website.</p></div>
 <div class="shop-grid">
-<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Ed-Seats-and-Son-Building-1024x512.jpg" alt="Ed Sears and Son building" loading="lazy"><figcaption>Shop building — 1241 Saratoga Rd</figcaption></figure>
-<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Staff-outside-of-building-768x722.jpg" alt="Staff outside shop" loading="lazy"><figcaption>Our team outside the shop</figcaption></figure>
-<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Signage-of-shop.jpg" alt="Shop signage" loading="lazy"><figcaption>Shop signage</figcaption></figure>
-<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Wheel-alignment-done-by-technician.jpg" alt="Wheel alignment" loading="lazy"><figcaption>Wheel alignment in progress</figcaption></figure>
-<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Service-writter-768x512.jpg" alt="Service advisor" loading="lazy"><figcaption>Service advisor at the desk</figcaption></figure>
-<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Lead-techniciand-and-service-advisor-at-the-office-1.jpg" alt="Technicians in office" loading="lazy"><figcaption>Lead tech & service advisor</figcaption></figure>
+<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Ed-Seats-and-Son-Building-1024x512.jpg" alt="Shop" loading="lazy"><figcaption>1241 Saratoga Rd</figcaption></figure>
+<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Staff-outside-of-building-768x722.jpg" alt="Staff" loading="lazy"><figcaption>Our team</figcaption></figure>
+<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Signage-of-shop.jpg" alt="Signage" loading="lazy"><figcaption>Shop signage</figcaption></figure>
+<figure><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/10/Wheel-alignment-done-by-technician.jpg" alt="Alignment" loading="lazy"><figcaption>Wheel alignment</figcaption></figure>
 </div>
 </div></section>
 
-<footer class="site-footer"><p>&copy; Ed Sears & Son Auto Repair · 1241 Saratoga Rd, Ballston Spa, NY · (518) 309-4157</p>
-<p style="margin-top:6px"><a href="https://edsearsandsons.com/" target="_blank" rel="noopener" style="color:var(--accent)">Original site: edsearsandsons.com</a></p></footer>
+<footer class="site-footer"><p>&copy; Ed Sears & Son Auto Repair · Ballston Spa, NY · (518) 309-4157</p></footer>
+
 <script>
-var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');
-if(t&&l)t.onclick=function(){l.classList.toggle('open')};
-document.querySelectorAll('.brand-pill').forEach(function(pill){
-  pill.onclick=function(){
-    document.querySelectorAll('.brand-pill').forEach(function(x){x.classList.remove('active')});
-    pill.classList.add('active');
-    var pr=document.getElementById('brand-preview');
-    if(pr){pr.classList.add('show');document.getElementById('bp-name').textContent=pill.textContent.trim();
-    document.getElementById('bp-msg').textContent='We service '+pill.textContent.trim()+' vehicles in Ballston Spa and the Saratoga area. Schedule diagnostics or repair today.';}
+(function(){
+  var brandImages = {
+    Honda: { src: '../pc/72829.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/72829', white: false, label: 'Honda Accord' },
+    Toyota: { src: '../pc/65862.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/65862', white: true, label: 'Toyota RAV4' },
+    Nissan: { src: '../pc/68357.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/68357', white: false, label: 'Nissan Rogue' },
+    Kia: { src: '../pc/104998.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/104998', white: false, label: 'Kia Niro EV' },
+    Subaru: { src: '../pc/112636.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/112636', white: false, label: 'Toyota / Subaru class SUV' },
+    Hyundai: { src: '../pc/72054.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/72054', white: false, label: 'Kia/Hyundai crossover' },
+    BMW: { src: '../pc/72829.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/72829', white: false, label: 'BMW (representative)' },
+    Audi: { src: '../pc/72829.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/72829', white: false, label: 'Audi (representative)' },
+    Volkswagen: { src: '../pc/70192.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/70192', white: false, label: 'VW class' },
+    Mazda: { src: '../pc/68357.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/68357', white: false, label: 'Mazda class SUV' },
+    Ford: { src: '../pc/68267.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/68267', white: false, label: 'Ford F-150' },
+    Chevrolet: { src: '../pc/70192.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/70192', white: false, label: 'Chevrolet Trax' },
+    Jeep: { src: 'https://www.mitchell1crm.com/CrmUtilities2/Image/67847', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/67847', white: false, label: 'Jeep Wrangler' },
+    GMC: { src: '../pc/68267.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/68267', white: false, label: 'GMC / truck class' },
+    Ram: { src: '../pc/69395.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/69395', white: false, label: 'Ram / truck class' },
+    Buick: { src: '../pc/95513.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/95513', white: false, label: 'Buick Encore GX' },
+    Dodge: { src: '../pc/69395.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/69395', white: false, label: 'Dodge / truck class' },
+    Cadillac: { src: '../pc/95513.png', fallback: 'https://www.mitchell1crm.com/CrmUtilities2/Image/95513', white: false, label: 'Cadillac class SUV' }
   };
-});
+
+  var t = document.querySelector('.nav-toggle'), l = document.querySelector('.nav-links');
+  if (t && l) t.onclick = function(){ l.classList.toggle('open'); };
+
+  document.querySelectorAll('.brand-pill').forEach(function(pill){
+    pill.addEventListener('click', function(){
+      document.querySelectorAll('.brand-pill').forEach(function(x){ x.classList.remove('active'); });
+      pill.classList.add('active');
+
+      var brand = pill.getAttribute('data-brand') || pill.textContent.trim();
+      var info = brandImages[brand];
+      var pr = document.getElementById('brand-preview');
+      var img = document.getElementById('bp-img');
+      var name = document.getElementById('bp-name');
+      var msg = document.getElementById('bp-msg');
+
+      if (pr) pr.classList.add('show');
+      if (name) name.textContent = brand;
+      if (msg) msg.textContent = 'We service ' + brand + ' vehicles in Ballston Spa and the Saratoga area. Schedule diagnostics or repair today.';
+
+      if (img && info) {
+        img.style.opacity = '0.4';
+        img.className = info.white ? 'white-bg' : '';
+        img.alt = info.label || brand;
+        var next = info.src;
+        img.onerror = function(){
+          img.onerror = null;
+          img.src = info.fallback;
+        };
+        img.onload = function(){ img.style.opacity = '1'; };
+        img.src = next;
+        // force reload if same url pattern
+        if (img.complete) img.style.opacity = '1';
+      }
+
+      pr.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+})();
 </script>
 </body></html>
