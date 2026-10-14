@@ -3,35 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Ed Sears &amp; Son Auto Repair</title>
+<title>Services | Ed Sears &amp; Son</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
+<style>
+:root{--bg:#0a0a0c;--bg2:#121216;--card:#1a1a20;--accent:#e8a838;--accent2:#c48a2a;--text:#f2f2f6;--muted:#9a9aaa;--border:rgba(255,255,255,.08);--radius:14px;--font:'Inter',system-ui,sans-serif;--display:'Oswald',system-ui,sans-serif;--header:70px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1200px,92%);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:1000;height:var(--header);background:rgba(10,10,12,.95);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:100%;width:min(1200px,92%);margin-inline:auto}
+.logo-text{font-family:var(--display);font-weight:700}.logo-text span{color:var(--accent)}.logo-sub{font-size:.6rem;letter-spacing:.2em;color:var(--muted);display:block}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap}.nav-links a{padding:8px 12px;font-size:.85rem;color:var(--muted);border-radius:8px}
+.nav-links a.active{color:var(--text);background:rgba(255,255,255,.05)}
+.nav-cta{background:linear-gradient(135deg,var(--accent),var(--accent2))!important;color:#0a0a0c!important;padding:10px 16px!important;border-radius:50px!important;font-weight:600!important}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
+.page-hero{background:var(--bg2);padding:48px 0;text-align:center;border-bottom:1px solid var(--border)}
+.page-hero h1{font-family:var(--display);font-size:2.2rem}
+.section{padding:72px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+.card:hover{border-color:rgba(232,168,56,.3);transform:translateY(-4px)}
+.card img{width:56px;height:56px;margin-bottom:16px}
+.card h3{font-family:var(--display);font-size:1.25rem;margin-bottom:10px}
+.card p{color:var(--muted);margin-bottom:12px}
+.card a{color:var(--accent);font-weight:600}
+.site-footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);margin-top:40px}
+@media(max-width:900px){.nav-toggle{display:block}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#0a0a0c;flex-direction:column;padding:16px}.nav-links.open{display:flex}}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <nav class="nav">
-    <a href="../index.html" class="logo"><span class="logo-text">ED SEARS <span>&amp; SON</span></span><span class="logo-sub">AUTO REPAIR</span></a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="index.html" class="active">Services</a>
-      <a href="../vehicles/index.html">Vehicles</a>
-      <a href="../reviews/index.html">Reviews</a>
-      <a href="../specials/index.html">Specials</a>
-      <a href="../contact/index.html">Contact</a>
-      <a href="https://edsearsandsons.com/appointments/" class="nav-cta" target="_blank" rel="noopener">Schedule Appointment</a>
-    </div>
-  </nav>
-</header>
-<div class="page-hero"><div class="container"><h1>Our Services</h1><p>Expert automotive repair and maintenance in Ballston Spa, NY</p></div></div>
+<header class="site-header"><nav class="nav">
+<a href="../index.html" class="logo"><span class="logo-text">ED SEARS <span>&amp; SON</span></span><span class="logo-sub">AUTO REPAIR</span></a>
+<button type="button" class="nav-toggle">☰</button>
+<div class="nav-links">
+<a href="../index.html">Home</a><a href="index.html" class="active">Services</a><a href="../vehicles/index.html">Vehicles</a>
+<a href="../contact/index.html">Contact</a>
+<a href="https://edsearsandsons.com/appointments/" class="nav-cta" target="_blank" rel="noopener">Schedule</a>
+</div></nav></header>
+<div class="page-hero"><div class="container"><h1>Our Services</h1></div></div>
 <section class="section"><div class="container"><div class="cards">
-<article class="card"><img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-standard-maintenance-icon.png" alt="" width="56" height="56"><h3>Standard Maintenance</h3><p>Factory scheduled maintenance, oil changes, filters, tune-ups, inspections.</p><a class="more" href="https://edsearsandsons.com/service/standard-maintenance-auto-service/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-engine-icon-3.png" alt="" width="56" height="56"><h3>Engine Auto Service</h3><p>Engine repair, performance checks, cooling system, fuel injection.</p><a class="more" href="https://edsearsandsons.com/service/engine-auto-service/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/exhaust3.png" alt="" width="56" height="56"><h3>Exhaust Services</h3><p>Exhaust repair &amp; replacement, mufflers, tailpipes.</p><a class="more" href="https://edsearsandsons.com/service/exhaust-services/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><h3>Auto Electrical</h3><p>Electrical diagnostics, alternator, starter, power accessories.</p><a class="more" href="https://edsearsandsons.com/service/auto-electrical-services/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><h3>Heating &amp; AC</h3><p>Heating and cooling diagnostics, compressor, belts.</p><a class="more" href="https://edsearsandsons.com/service/heating-and-air-conditioner-repair/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><h3>Alignment &amp; More</h3><p>Alignment, transmission, brakes, suspension, general repair.</p><a class="more" href="https://edsearsandsons.com/service/" target="_blank" rel="noopener">All services →</a></article>
+<article class="card"><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-standard-maintenance-icon.png" alt=""><h3>Maintenance</h3><p>Oil changes, filters, tune-ups, inspections.</p><a href="https://edsearsandsons.com/service/standard-maintenance-auto-service/" target="_blank" rel="noopener">Details →</a></article>
+<article class="card"><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-engine-icon-3.png" alt=""><h3>Engine</h3><p>Repair, diagnostics, cooling, fuel systems.</p><a href="https://edsearsandsons.com/service/engine-auto-service/" target="_blank" rel="noopener">Details →</a></article>
+<article class="card"><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/exhaust3.png" alt=""><h3>Exhaust</h3><p>Exhaust and emissions service.</p><a href="https://edsearsandsons.com/service/exhaust-services/" target="_blank" rel="noopener">Details →</a></article>
+<article class="card"><h3>Electrical</h3><p>Battery, alternator, starter.</p><a href="https://edsearsandsons.com/service/auto-electrical-services/" target="_blank" rel="noopener">Details →</a></article>
+<article class="card"><h3>Heating &amp; AC</h3><p>Climate system repair.</p><a href="https://edsearsandsons.com/service/heating-and-air-conditioner-repair/" target="_blank" rel="noopener">Details →</a></article>
+<article class="card"><h3>More</h3><p>Brakes, alignment, transmission.</p><a href="https://edsearsandsons.com/service/" target="_blank" rel="noopener">All →</a></article>
 </div></div></section>
-<footer class="site-footer"><div class="container"><div class="footer-bottom"><p>&copy; <span id="year"></span> Ed Sears &amp; Son Auto Repair</p></div></div></footer>
-<script src="../js/main.js"></script>
+<footer class="site-footer"><p>&copy; Ed Sears &amp; Son Auto Repair · (518) 309-4157</p></footer>
+<script>var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');if(t&&l)t.onclick=function(){l.classList.toggle('open')};</script>
 </body></html>
