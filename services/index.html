@@ -3,53 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Ed Sears &amp; Son</title>
+<title>Auto Repair Services Ballston Spa NY | Maintenance, Engine, Brakes | Ed Sears & Son</title>
+<meta name="description" content="Full auto repair services in Ballston Spa: factory maintenance, engine repair, exhaust, electrical, heating & AC, brakes, alignment. Serving Saratoga Springs & Malta. Call (518) 309-4157.">
+<meta name="keywords" content="auto repair services Ballston Spa, oil change Ballston Spa NY, engine repair Saratoga, brake service Malta, auto electrical Ballston Spa, AC repair Saratoga Springs">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0a0c;--bg2:#121216;--card:#1a1a20;--accent:#e8a838;--accent2:#c48a2a;--text:#f2f2f6;--muted:#9a9aaa;--border:rgba(255,255,255,.08);--radius:14px;--font:'Inter',system-ui,sans-serif;--display:'Oswald',system-ui,sans-serif;--header:70px}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6}
-a{color:inherit;text-decoration:none}
-.container{width:min(1200px,92%);margin-inline:auto}
-.site-header{position:sticky;top:0;z-index:1000;height:var(--header);background:rgba(10,10,12,.95);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:100%;width:min(1200px,92%);margin-inline:auto}
-.logo-text{font-family:var(--display);font-weight:700}.logo-text span{color:var(--accent)}.logo-sub{font-size:.6rem;letter-spacing:.2em;color:var(--muted);display:block}
-.nav-links{display:flex;gap:4px;flex-wrap:wrap}.nav-links a{padding:8px 12px;font-size:.85rem;color:var(--muted);border-radius:8px}
-.nav-links a.active{color:var(--text);background:rgba(255,255,255,.05)}
-.nav-cta{background:linear-gradient(135deg,var(--accent),var(--accent2))!important;color:#0a0a0c!important;padding:10px 16px!important;border-radius:50px!important;font-weight:600!important}
-.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
-.page-hero{background:var(--bg2);padding:48px 0;text-align:center;border-bottom:1px solid var(--border)}
-.page-hero h1{font-family:var(--display);font-size:2.2rem}
-.section{padding:72px 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
-.card:hover{border-color:rgba(232,168,56,.3);transform:translateY(-4px)}
-.card img{width:56px;height:56px;margin-bottom:16px}
-.card h3{font-family:var(--display);font-size:1.25rem;margin-bottom:10px}
-.card p{color:var(--muted);margin-bottom:12px}
-.card a{color:var(--accent);font-weight:600}
-.site-footer{border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--muted);margin-top:40px}
-@media(max-width:900px){.nav-toggle{display:block}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#0a0a0c;flex-direction:column;padding:16px}.nav-links.open{display:flex}}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+.container{width:min(1140px,92%);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:1000;height:var(--header);background:rgba(10,10,12,.96);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:100%;width:min(1140px,92%);margin-inline:auto}
+.logo-text{font-family:var(--display);font-weight:700}.logo-text span{color:var(--accent)}.logo-sub{font-size:.58rem;letter-spacing:.2em;color:var(--muted);display:block}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap}.nav-links a{padding:8px 11px;font-size:.82rem;color:var(--muted);border-radius:8px}
+.nav-links a.active,.nav-links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.nav-cta{background:linear-gradient(135deg,var(--accent),var(--accent2))!important;color:#0a0a0c!important;padding:9px 14px!important;border-radius:50px!important;font-weight:600!important}
+.nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:1.4rem;cursor:pointer}
+.page-hero{background:var(--bg2);padding:48px 0 40px;text-align:center;border-bottom:1px solid var(--border)}
+.page-hero h1{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px}.page-hero p{color:var(--muted);max-width:560px;margin-inline:auto}
+.section{padding:56px 0}.section-alt{background:var(--bg2)}
+.svc-block{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:20px}
+.svc-block img.icon{width:64px;height:64px;object-fit:contain}
+.svc-block h2{font-family:var(--display);font-size:1.45rem;margin-bottom:10px;font-weight:500}
+.svc-block .intro{color:var(--muted);margin-bottom:14px;font-size:.95rem}
+.svc-block ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px 16px;margin-bottom:14px}
+.svc-block li{color:#c8c8d0;font-size:.9rem;padding-left:18px;position:relative}
+.svc-block li::before{content:'•';position:absolute;left:0;color:var(--accent)}
+.svc-block a.more{color:var(--accent);font-weight:600;font-size:.9rem}
+.btn{display:inline-flex;padding:13px 24px;font-weight:600;border-radius:50px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0a0a0c}
+.amenities{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.amenity{background:var(--card);border:1px solid var(--border);border-radius:50px;padding:10px 18px;font-size:.88rem;color:var(--muted)}
+.site-footer{border-top:1px solid var(--border);padding:28px;text-align:center;color:var(--muted);margin-top:36px;font-size:.85rem}
+@media(max-width:700px){.svc-block{grid-template-columns:1fr}.svc-block img.icon{margin-bottom:8px}.nav-toggle{display:block}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#0a0a0c;flex-direction:column;padding:14px}.nav-links.open{display:flex}}
 </style>
 </head>
 <body>
 <header class="site-header"><nav class="nav">
-<a href="../index.html" class="logo"><span class="logo-text">ED SEARS <span>&amp; SON</span></span><span class="logo-sub">AUTO REPAIR</span></a>
+<a href="../index.html" class="logo"><span class="logo-text">ED SEARS <span>& SON</span></span><span class="logo-sub">AUTO REPAIR</span></a>
 <button type="button" class="nav-toggle">☰</button>
 <div class="nav-links">
 <a href="../index.html">Home</a><a href="index.html" class="active">Services</a><a href="../vehicles/index.html">Vehicles</a>
-<a href="../contact/index.html">Contact</a>
+<a href="../reviews/index.html">Reviews</a><a href="../contact/index.html">Contact</a>
 <a href="https://edsearsandsons.com/appointments/" class="nav-cta" target="_blank" rel="noopener">Schedule</a>
 </div></nav></header>
-<div class="page-hero"><div class="container"><h1>Our Services</h1></div></div>
-<section class="section"><div class="container"><div class="cards">
-<article class="card"><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-standard-maintenance-icon.png" alt=""><h3>Maintenance</h3><p>Oil changes, filters, tune-ups, inspections.</p><a href="https://edsearsandsons.com/service/standard-maintenance-auto-service/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-engine-icon-3.png" alt=""><h3>Engine</h3><p>Repair, diagnostics, cooling, fuel systems.</p><a href="https://edsearsandsons.com/service/engine-auto-service/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><img src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/exhaust3.png" alt=""><h3>Exhaust</h3><p>Exhaust and emissions service.</p><a href="https://edsearsandsons.com/service/exhaust-services/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><h3>Electrical</h3><p>Battery, alternator, starter.</p><a href="https://edsearsandsons.com/service/auto-electrical-services/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><h3>Heating &amp; AC</h3><p>Climate system repair.</p><a href="https://edsearsandsons.com/service/heating-and-air-conditioner-repair/" target="_blank" rel="noopener">Details →</a></article>
-<article class="card"><h3>More</h3><p>Brakes, alignment, transmission.</p><a href="https://edsearsandsons.com/service/" target="_blank" rel="noopener">All →</a></article>
-</div></div></section>
-<footer class="site-footer"><p>&copy; Ed Sears &amp; Son Auto Repair · (518) 309-4157</p></footer>
-<script>var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');if(t&&l)t.onclick=function(){l.classList.toggle('open')};</script>
+
+<div class="page-hero"><div class="container">
+<h1>Auto Repair Services in Ballston Spa</h1>
+<p>Complete maintenance and repair for cars and light trucks. We use modern diagnostics and quality parts so your vehicle stays safe on Saratoga County roads.</p>
+</div></div>
+
+<section class="section"><div class="container">
+
+<article class="svc-block">
+<img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-standard-maintenance-icon.png" alt="Maintenance">
+<div>
+<h2>Standard Maintenance & Auto Service</h2>
+<p class="intro">Maintaining your vehicle regularly is one of the most important things you can do for longevity and safety. Proper maintenance helps prevent costly repairs and keeps your car performing at its best. At Ed Sears & Son Auto Repair, we offer a full range of maintenance services in Ballston Spa.</p>
+<ul>
+<li>Factory Scheduled Maintenance</li>
+<li>30k / 60k / 90k / 120k Mile Services</li>
+<li>Computer Diagnostics</li>
+<li>Oil Changes</li>
+<li>Tune-Ups</li>
+<li>Filter Replacements</li>
+<li>Safety & Emissions Inspections</li>
+<li>Windshield Wiper Blades</li>
+<li>Fluid Services</li>
+<li>Trip Inspections</li>
+<li>Maintenance Inspections</li>
+<li>Check Engine Light Diagnostics</li>
+<li>Brake Service</li>
+<li>Shocks & Struts</li>
+<li>Chassis & Suspension</li>
+<li>Steering Repair</li>
+</ul>
+<a class="more" href="https://edsearsandsons.com/service/standard-maintenance-auto-service/" target="_blank" rel="noopener">Full details on original site →</a>
+</div>
+</article>
+
+<article class="svc-block">
+<img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/updated-engine-icon-3.png" alt="Engine">
+<div>
+<h2>Engine Auto Service</h2>
+<p class="intro">Your engine is the heart of your vehicle. Regular engine service supports performance and longevity. Our Ballston Spa team uses the latest diagnostic tools to provide accurate diagnosis and efficient engine repair so you can get back on the road.</p>
+<ul>
+<li>Engine Repair</li>
+<li>Engine Replacement</li>
+<li>Engine Performance Check</li>
+<li>Belt Replacement</li>
+<li>Hose Replacement</li>
+<li>Cooling System Repair</li>
+<li>Radiator Repair & Replacement</li>
+<li>Water Pump Repair & Replacement</li>
+<li>Drivability Diagnostics</li>
+<li>Fuel Injection Repair & Service</li>
+<li>Fuel System Repair</li>
+<li>Ignition System Repair</li>
+</ul>
+<a class="more" href="https://edsearsandsons.com/service/engine-auto-service/" target="_blank" rel="noopener">Full details on original site →</a>
+</div>
+</article>
+
+<article class="svc-block">
+<img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/exhaust3.png" alt="Exhaust">
+<div>
+<h2>Exhaust Services</h2>
+<p class="intro">If you are concerned about emissions or your exhaust is noisy or damaged, visit Ed Sears & Son in Ballston Spa. We repair and replace exhaust components so your vehicle stays quiet, efficient, and inspection-ready.</p>
+<ul>
+<li>Exhaust System Repair</li>
+<li>Exhaust System Replacement</li>
+<li>Muffler Service</li>
+<li>Tailpipe & Related Components</li>
+<li>Emissions-Related Exhaust Work</li>
+</ul>
+<a class="more" href="https://edsearsandsons.com/service/exhaust-services/" target="_blank" rel="noopener">Full details on original site →</a>
+</div>
+</article>
+
+<article class="svc-block">
+<img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/car-battery.png" alt="Electrical">
+<div>
+<h2>Auto Electrical Services</h2>
+<p class="intro">If your car’s electrical system is acting up, we have the diagnostic tools and expertise to identify the issue quickly—from minor faults to major electrical problems. We use state-of-the-art equipment for efficient diagnosis and repair.</p>
+<ul>
+<li>Electrical System Diagnostics & Repair</li>
+<li>Alternator Repair & Replacement</li>
+<li>Starter Repair & Replacement</li>
+<li>Battery Testing & Replacement</li>
+<li>Windshield Wiper Repair</li>
+<li>Power Lock Repair</li>
+<li>Power Window Repair</li>
+<li>Power Accessory Repair</li>
+<li>Light Repair & Bulb Replacement</li>
+<li>Power Steering Related Electrical</li>
+</ul>
+<a class="more" href="https://edsearsandsons.com/service/auto-electrical-services/" target="_blank" rel="noopener">Full details on original site →</a>
+</div>
+</article>
+
+<article class="svc-block">
+<img class="icon" src="https://edsearsandsons.com/wp-content/uploads/sites/383/2024/07/ac-final.png" alt="AC">
+<div>
+<h2>Heating & Air Conditioner Repair</h2>
+<p class="intro">Your heating and A/C system is essential for comfort year-round. We repair and maintain heating and air conditioning systems so you stay comfortable in extreme weather. Comprehensive service keeps the system running efficiently.</p>
+<ul>
+<li>Heating & Cooling System Diagnostics</li>
+<li>Auto Air Conditioning Repair & Service</li>
+<li>Heating System Repair & Service</li>
+<li>Belt Repair & Replacement</li>
+<li>Compressor Repair & Replacement</li>
+</ul>
+<a class="more" href="https://edsearsandsons.com/service/heating-and-air-conditioner-repair/" target="_blank" rel="noopener">Full details on original site →</a>
+</div>
+</article>
+
+<article class="svc-block">
+<div style="width:64px;height:64px;border-radius:12px;background:rgba(232,168,56,.12);display:flex;align-items:center;justify-content:center;font-size:1.6rem">🔧</div>
+<div>
+<h2>Brakes, Alignment & General Repair</h2>
+<p class="intro">Beyond the core services above, our shop handles brakes, wheel alignment, suspension, and general automotive repair for domestic and foreign vehicles in the Ballston Spa and Saratoga Springs area.</p>
+<ul>
+<li>Brake Pads & Rotors</li>
+<li>Caliper Service</li>
+<li>Wheel Alignment</li>
+<li>Suspension Work</li>
+<li>Transmission Concerns</li>
+<li>NYS Inspection Support</li>
+<li>Pre-Purchase Inspections</li>
+<li>General Diagnostics</li>
+</ul>
+<a class="more" href="https://edsearsandsons.com/service/" target="_blank" rel="noopener">Browse all services →</a>
+</div>
+</article>
+
+<div style="text-align:center;margin-top:36px">
+<p style="color:var(--muted);margin-bottom:16px">Ready to schedule service in Ballston Spa?</p>
+<a href="https://edsearsandsons.com/appointments/" class="btn" target="_blank" rel="noopener">Schedule an Appointment</a>
+<a href="tel:+15183094157" class="btn" style="margin-left:10px;background:transparent;border:1.5px solid var(--muted);color:var(--text)">Call (518) 309-4157</a>
+<div class="amenities">
+<span class="amenity">Free WiFi</span>
+<span class="amenity">Refreshments</span>
+<span class="amenity">Waiting Area</span>
+<span class="amenity">Key Drop Off</span>
+</div>
+</div>
+
+</div></section>
+
+<footer class="site-footer">
+<p>&copy; Ed Sears & Son Auto Repair · 1241 Saratoga Rd, Ballston Spa, NY 12020 · (518) 309-4157</p>
+</footer>
+<script>
+var t=document.querySelector('.nav-toggle'),l=document.querySelector('.nav-links');
+if(t&&l)t.onclick=function(){l.classList.toggle('open')};
+</script>
 </body></html>
